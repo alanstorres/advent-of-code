@@ -33,7 +33,7 @@
         appearances (u/sum-booleans appears?)]
     (= appearances 1)))
 
-(def path "./resources/input-day02")
+(def path "./resources/aoc_2020/input-day02")
 
 (def lst (u/read-from-file path))
 

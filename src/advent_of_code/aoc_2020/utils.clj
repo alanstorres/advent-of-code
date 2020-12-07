@@ -1,6 +1,5 @@
 (ns advent_of_code.aoc-2020.utils
-  (:require [clojure.string :as str]
-            [clojure.java.io :as io]))
+  (:require [clojure.string :as str]))
 
 (defn read-from-file [path]
   (->> path

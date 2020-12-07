@@ -1,6 +1,6 @@
 (ns advent_of_code.aoc_2020.day-01
   (:require [clojure.math.combinatorics :as combo]
-            [aoc_2020.utils :as u]))
+            [advent_of_code.aoc-2020.utils :as u]))
 
 (defn multiply-if-sum-to [sum lst]
   (if (= (reduce + lst) sum) (reduce * lst)))
@@ -10,7 +10,7 @@
         multi (map (partial multiply-if-sum-to sum) pairs)]
     (first (filter some? multi))))
 
-(def path "advent_code_2020/input-day01.txt")
+(def path "./resources/input-day01")
 
 (def lst (map u/str->int (u/read-from-file path)))
 

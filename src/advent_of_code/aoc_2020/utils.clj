@@ -4,7 +4,6 @@
 
 (defn read-from-file [path]
   (->> path
-       (io/resource)
        (slurp)
        (str/split-lines)))
 

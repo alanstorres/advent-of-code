@@ -4,7 +4,7 @@
 (defn tree? [s]
   (= s "#"))
 
-(def path "./resources/input-day03")
+(def path "./resources/aoc_2020/input-day03")
 
 (def terrain-map (u/read-from-file path))
 

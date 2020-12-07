@@ -2,7 +2,7 @@
   (:require [clojure.string :as str]
             [advent_of_code.aoc-2020.utils :as u]))
 
-(def path "./resources/input-day04")
+(def path "./resources/aoc_2020/input-day04")
 
 (defn parse-passport [path]
   (-> path

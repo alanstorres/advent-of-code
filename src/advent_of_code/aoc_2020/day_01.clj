@@ -10,7 +10,7 @@
         multi (map (partial multiply-if-sum-to sum) pairs)]
     (first (filter some? multi))))
 
-(def path "./resources/input-day01")
+(def path "./resources/aoc_2020/input-day01")
 
 (def lst (map u/str->int (u/read-from-file path)))
 

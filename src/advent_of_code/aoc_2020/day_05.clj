@@ -40,6 +40,25 @@
 
 (def seats-info (map (partial get-seat-info 128 8) codes))
 
-(def ids (map))
+(def ids (map :id seats-info))
 
-(println seats-info)
+;Part 01
+(def result-pt-1 (apply max ids))
+
+(println "Part 1:" result-pt-1)
+
+;Part 02
+(defn return-if-not-contained [arr element]
+  (if (not (u/in? arr element))
+    element))
+
+;Most likely really inefficient
+(defn ugly-search [arr]
+  (let [start (apply min arr)
+        end (apply max arr)
+        r (range start (+ 1 end))]
+    (first (remove nil? (map (partial return-if-not-contained arr) r)))))
+
+(def result-pt-2 (ugly-search ids))
+
+(println "Part 2:" result-pt-2)
